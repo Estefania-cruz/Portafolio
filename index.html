@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--Menu cabecera-->
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <a href="">Estefania</a>
+                <a href="#">Estefania</a>
             </div>
             <nav id="nav">
                 <ul>
@@ -18,7 +20,7 @@
                     <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
                     <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portafolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -27,9 +29,23 @@
             </div>
         </header>
     </div>
-
+  <!-- SECCION INICIO -->
+  <section id="inicio" class="inicio">
+    <div class="contenido-banner">
+        <div class="contenedor-img">
+            <img src="img/hero.png" alt="">
+        </div>
+        <h1>Estefania Cristobal de la Cruz</h1>
+        <h2>Ingeniera de Software - Desarrollador Web</h2>
+        <div class="redes">
+            <a href="https://www.instagram.com/estefaniacruzcd/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/estefan%C3%ADa-cristobal-de-la-cruz-4919bb1bb/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Estefania-cruz"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+</section>
     <!--Seccion inicial-->
-    <seccion id="inicio" class="inicio">
+    <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
             <p><span>Hola un gusto soy Estefania Cristobal de la Cruz,</span>soy ingeniera en software dedicada al área de forntend cuento con dos 2 años de experiancia como Desarrolladora Web, actualmente tengo 22 años y trabajo como desarrollado web en una consultoria en la CDMX. </p>
@@ -64,7 +80,7 @@
                             <span>VIAJAR</span>
                         </div>
                         <div class="interes">
-                            <i class="fa solid fa-apple"></i>
+                            <i class="fa-solid fa-apple-whole"></i>
                             <span>MAC OS</span>
                         </div>
                         <div class="interes">
@@ -72,18 +88,18 @@
                             <span>LIBROS</span>
                         </div>
                         <div class="interes">
-                            <i class="fa solid fa-gamepad"></i>
+                            <i class="fa-brands fa-windows"></i>
                             <span>WINDOWS</span>
                         </div>
                         <div class="interes">
-                            <i class="fa solid fa-BOOK"></i>
-                            <span>TECNOLOGIAS</span>
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>TECNOLOGIA</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <button>
+            <button onclick="descargarPDF()">
                 DESCARGA CV <i class="fa-solid fa-dwowload"></i>
                 <span class="overlay"></span>
             </button>
@@ -298,5 +314,59 @@
             </div>
         </div>
     </section>
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion1.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Ecatepec de Morelos, Mex. Lomas de san carlos.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: +52 5517298689
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: fanycristobal7@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.instagram.com/estefaniacruzcd/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/estefan%C3%ADa-cristobal-de-la-cruz-4919bb1bb/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Estefania-cruz"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
